@@ -24,7 +24,9 @@ elif [ "$version" -lt "8" ]; then
 fi
 
 phpcgiconf=""
-if [ "$php_package" = "php7.1-cgi" ]; then
+if [ "$php_package" = "php7.3-cgi" ]; then
+    phpcgiconf="/etc/php/7.3/cgi/php.ini"
+elif [ "$php_package" = "php7.1-cgi" ]; then
     phpcgiconf="/etc/php/7.1/cgi/php.ini"
 elif [ "$php_package" = "php7.0-cgi" ]; then
     phpcgiconf="/etc/php/7.0/cgi/php.ini"
